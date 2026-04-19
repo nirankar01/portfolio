@@ -1,0 +1,289 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd369;
+}
+
+/* ================= HAMBURGER ================= */
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero img {
+  width: 140px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero p {
+  margin: 10px 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Social */
+.social a {
+  margin: 10px;
+  font-size: 22px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #ffd369;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ffd369;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-container div {
+  background: rgba(255,255,255,0.15);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skills-container div:hover {
+  background: #ffd369;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 14px;
+}
+
+.tech {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #ffd369;
+  color: black;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 6px 10px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  margin-right: 8px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: #ffd369;
+}
+
+/* ================= CONTACT ================= */
+
+form {
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #ffd369;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0,0,0,0.4);
+}
+
+/* ================= DARK MODE ================= */
+
+#theme-toggle {
+  display: none;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#theme-toggle:checked ~ * {
+  background: #121212 !important;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  /* Toggle Menu */
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}
